@@ -1,17 +1,25 @@
 package pl.edu.agh.kis.pz1;
 
-import pl.edu.agh.kis.pz1.util.TextUtils;
 
-/**
- * Przykładowy kod do zajęć laboratoryjnych 2, 3, 4 z przedmiotu: Programowanie zaawansowane 1
- * @author Paweł Skrzyński
- */
+import java.util.Arrays;
+
 public class Main {
+    public static final int readersCount = 10;
+    public static final int writersCount = 3;
+
     public static void main( String[] args ) {
-        System.out.println( "Szablon projektu z metodą main i zależnościami wbudowanymi w wykonywalny jar" );
-        //wywołanie metody generującej hash SHA-512
-        System.out.println("HASH 512 dla słowa test: " + TextUtils.sha512Hash("test"));
+        Library library = new Library();
 
+        Writer[] writers = new Writer[writersCount];
+        Reader[] readers = new Reader[readersCount];
+        for(int i=0; i<writersCount; i++) {
+            writers[i] = new Writer(i, library);
+        }
 
+        for(int i=0; i<readers.length; i++) {
+            readers[i] = new Reader(i, library);
+        }
+        Arrays.stream(writers).forEach(Writer::start);
+        Arrays.stream(readers).forEach(Reader::start);
     }
 }
