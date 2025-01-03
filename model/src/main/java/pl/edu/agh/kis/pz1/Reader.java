@@ -14,14 +14,12 @@ public class Reader extends Thread {
         for (;;) {
             try {
                 System.out.println("Czytelnik " + readerId + " chce czytać");
-                library.requestRead(String.valueOf(readerId));
+                library.requestRead(readerId);
 
                 // Symulacja czytania
-                System.out.println("Czytelnik " + readerId + " czyta");
                 Thread.sleep((long) (1000 + Math.random() * 2000)); // Losowy czas od 1 do 3 sekund
 
-                library.finishRead(String.valueOf(readerId));
-                System.out.println("Czytelnik " + readerId + " zakończył czytanie");
+                library.finishRead(readerId);
 
                 // Krótkie opóźnienie przed kolejną próbą
                 Thread.sleep((long) (500 + Math.random() * 500));

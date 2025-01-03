@@ -3,47 +3,47 @@ package pl.edu.agh.kis.pz1;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.Semaphore;
 
+
 public class Library {
     private final Semaphore readerSemaphore = new Semaphore(5);
     private final Semaphore writerSemaphore = new Semaphore(1);
-    private final LinkedBlockingQueue<String> queue = new LinkedBlockingQueue<>();
-    private int activeReaders = 0;
-    private boolean writerActive = false;
+    private final LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<>();
+    boolean writerTurn = false;
 
-    public synchronized void requestRead(String readerId) throws InterruptedException {
-        queue.add("Reader-" + readerId);
-        while (!queue.peek().equals("Reader-" + readerId) || writerActive) {
+
+    public synchronized void requestRead(Integer readerId) throws InterruptedException {
+        queue.add(readerId);
+        while (readerSemaphore.availablePermits() == 0 || writerTurn) {
             wait();
         }
         queue.poll();
         readerSemaphore.acquire();
-        activeReaders++;
-        System.out.println("Czytelnik " + readerId + " czyta. Aktywni czytelnicy = " + activeReaders);
+        if(readerSemaphore.availablePermits() == 0) {
+            writerTurn = true;
+        }
+        System.out.println("Czytelnik " + readerId + " czyta.");
     }
 
-    public synchronized void finishRead(String readerId) {
-        activeReaders--;
+    public synchronized void finishRead(Integer readerId) {
         readerSemaphore.release();
-        System.out.println("Czytelnik " + readerId + " zakończył czytanie. Aktywni czytelnicy = " + activeReaders);
-        if (activeReaders == 0) {
+        System.out.println("Czytelnik " + readerId + " zakończył czytanie. Aktywni czytelnicy = ");
+        if (readerSemaphore.availablePermits() == 5) {
             notifyAll();
         }
     }
 
-    public synchronized void requestWrite(String writerId) throws InterruptedException {
-        queue.add("Writer-" + writerId); // Dodaj pisarza do kolejki
-        while (!queue.peek().equals("Writer-" + writerId) || activeReaders > 0 || writerActive) {
+    public synchronized void requestWrite(Integer writerId) throws InterruptedException {
+        while (writerSemaphore.availablePermits() == 0 || !writerTurn) {
             wait();
         }
         queue.poll(); // Usuń z kolejki
         writerSemaphore.acquire();
-        writerActive = true;
+        writerTurn = false;
         System.out.println("Pisarz " + writerId + " pisze");
     }
 
-    public synchronized void finishWrite(String writerId) {
+    public synchronized void finishWrite(Integer writerId) {
         writerSemaphore.release();
-        writerActive = false;
         System.out.println("Pisarz " + writerId + " zakończył pisanie");
         notifyAll();
     }

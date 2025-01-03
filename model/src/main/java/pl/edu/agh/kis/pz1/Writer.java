@@ -14,14 +14,12 @@ public class Writer extends Thread {
         for (;;) {
             try {
                 System.out.println("Pisarz " + writerId + " chce pisać");
-                library.requestWrite(String.valueOf(writerId));
+                library.requestWrite(writerId);
 
                 // Symulacja pisania
-                System.out.println("Pisarz " + writerId + " pisze");
                 Thread.sleep((long) (1000 + Math.random() * 2000)); // Losowy czas od 1 do 3 sekund
 
-                library.finishWrite(String.valueOf(writerId));
-                System.out.println("Pisarz " + writerId + " zakończył pisanie");
+                library.finishWrite(writerId);
 
                 // Krótkie opóźnienie przed kolejną próbą
                 Thread.sleep((long) (500 + Math.random() * 500));
