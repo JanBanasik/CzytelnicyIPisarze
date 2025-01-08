@@ -1,6 +1,5 @@
 package pl.edu.agh.kis.pz1;
 
-
 import java.util.Arrays;
 
 public class Main {
@@ -12,6 +11,7 @@ public class Main {
 
         Writer[] writers = new Writer[writersCount];
         Reader[] readers = new Reader[readersCount];
+
         for(int i=0; i<writersCount; i++) {
             writers[i] = new Writer(i, library);
         }

@@ -1,50 +1,35 @@
 package pl.edu.agh.kis.pz1;
 
-import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.Semaphore;
 
+
 public class Library {
-    private final Semaphore readerSemaphore = new Semaphore(5);
-    private final Semaphore writerSemaphore = new Semaphore(1);
-    private final LinkedBlockingQueue<String> queue = new LinkedBlockingQueue<>();
-    private int activeReaders = 0;
-    private boolean writerActive = false;
+    private final Semaphore accessSemaphore = new Semaphore(5, true);
+    private final Semaphore queueSemaphore = new Semaphore(1, true);
 
-    public synchronized void requestRead(String readerId) throws InterruptedException {
-        queue.add("Reader-" + readerId);
-        while (!queue.peek().equals("Reader-" + readerId) || writerActive) {
-            wait();
-        }
-        queue.poll();
-        readerSemaphore.acquire();
-        activeReaders++;
-        System.out.println("Czytelnik " + readerId + " czyta. Aktywni czytelnicy = " + activeReaders);
+    public void requestRead(Integer readerId) throws InterruptedException {
+        queueSemaphore.acquire();
+        System.out.println("Czytelnik " + readerId + " chce czytac");
+        accessSemaphore.acquire();
+        System.out.println("Czytelnik " + readerId + " czyta");
+        queueSemaphore.release();
     }
 
-    public synchronized void finishRead(String readerId) {
-        activeReaders--;
-        readerSemaphore.release();
-        System.out.println("Czytelnik " + readerId + " zakończył czytanie. Aktywni czytelnicy = " + activeReaders);
-        if (activeReaders == 0) {
-            notifyAll();
-        }
+    public synchronized void finishRead(Integer readerId) {
+        System.out.println("Czytelnik " + readerId + " zakończył czytanie. ");
+        accessSemaphore.release();
     }
 
-    public synchronized void requestWrite(String writerId) throws InterruptedException {
-        queue.add("Writer-" + writerId); // Dodaj pisarza do kolejki
-        while (!queue.peek().equals("Writer-" + writerId) || activeReaders > 0 || writerActive) {
-            wait();
-        }
-        queue.poll(); // Usuń z kolejki
-        writerSemaphore.acquire();
-        writerActive = true;
+    public void requestWrite(Integer writerId) throws InterruptedException {
+        queueSemaphore.acquire();
+        System.out.println("Pisarz " + writerId + " chce pisać");
+        accessSemaphore.acquire(5);
         System.out.println("Pisarz " + writerId + " pisze");
+        queueSemaphore.release();
     }
 
-    public synchronized void finishWrite(String writerId) {
-        writerSemaphore.release();
-        writerActive = false;
+    public synchronized void finishWrite(Integer writerId) {
         System.out.println("Pisarz " + writerId + " zakończył pisanie");
-        notifyAll();
+        accessSemaphore.release(5);
     }
 }
