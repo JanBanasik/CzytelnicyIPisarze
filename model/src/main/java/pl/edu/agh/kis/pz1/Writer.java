@@ -13,7 +13,6 @@ public class Writer extends Thread {
     public void run() {
         for (;;) {
             try {
-                System.out.println("Pisarz " + writerId + " chce pisać");
                 library.requestWrite(writerId);
 
                 // Symulacja pisania

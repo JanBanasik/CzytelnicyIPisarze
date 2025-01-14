@@ -13,7 +13,6 @@ public class Reader extends Thread {
     public void run() {
         for (;;) {
             try {
-                System.out.println("Czytelnik " + readerId + " chce czytać");
                 library.requestRead(readerId);
 
                 // Symulacja czytania
