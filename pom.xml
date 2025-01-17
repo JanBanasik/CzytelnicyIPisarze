@@ -45,7 +45,8 @@
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                    <reportOutputDirectory>${project.build.directory}/javadoc</reportOutputDirectory>
+                    <show>protected</show>
+                    <reportOutputDirectory>${project.basedir}/javadoc</reportOutputDirectory>
                     <source>${maven.compiler.source}</source>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>

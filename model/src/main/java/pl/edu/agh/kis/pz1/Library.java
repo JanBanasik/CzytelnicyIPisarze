@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * Represents a Library that manages readers and writers trying to access its resources.
  * This class ensures synchronized access to its resources, following the readers-writers problem.
  */
-class Library {
+public class Library {
     /** Delimiter used for printing debug messages. */
     String delim = "---------------------------";
     /** Delimiter used for printing info about current people inside*/
