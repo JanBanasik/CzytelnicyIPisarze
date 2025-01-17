@@ -3,6 +3,7 @@ package pl.edu.agh.kis.pz1;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,8 +13,7 @@ class LibraryTest {
     void testReaderCanEnterWhenLibraryNotFull() throws InterruptedException {
         Library library = new Library();
         library.requestRead(1);
-
-        assertEquals(1, library.peopleCurrentlyInside);
+        assertEquals(new AtomicInteger(1).get(), library.peopleCurrentlyInside.get());
         assertTrue(library.peopleInside.contains("Reader 1"));
     }
 
@@ -22,7 +22,7 @@ class LibraryTest {
         Library library = new Library();
         library.requestWrite(1);
 
-        assertEquals(5, library.peopleCurrentlyInside);
+        assertEquals(new AtomicInteger(5).get(), library.peopleCurrentlyInside.get());
         assertTrue(library.peopleInside.contains("Writer 1"));
     }
 

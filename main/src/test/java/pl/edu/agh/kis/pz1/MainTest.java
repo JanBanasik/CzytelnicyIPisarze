@@ -25,7 +25,7 @@ class MainTest {
 
     @Test
     void testRunThreads() {
-        provideInput("1\n2\n3");
+        provideInput("2\n3\n4");
         Main.createAndRunThreads();
         Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
         System.out.println(threadSet);
@@ -36,6 +36,6 @@ class MainTest {
                 counter++;
             }
         }
-        assertEquals(5, counter);
+        assertEquals(7, counter);
     }
 }
