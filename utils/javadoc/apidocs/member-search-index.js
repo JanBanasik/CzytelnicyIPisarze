@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"pl.edu.agh.kis.pz1","c":"SafePrinter","l":"safePrint()"},{"p":"pl.edu.agh.kis.pz1","c":"SafePrinter","l":"safePrint(String)","u":"safePrint(java.lang.String)"},{"p":"pl.edu.agh.kis.pz1","c":"SafePrinter","l":"safePrintWithoutNewLine(String)","u":"safePrintWithoutNewLine(java.lang.String)"}];updateSearchResults();

@@ -1,0 +1,6 @@
+projectKey=Czytelnicy1
+serverUrl=http://localhost:9000
+serverVersion=10.7.0.96327
+dashboardUrl=http://localhost:9000/dashboard?id=Czytelnicy1
+ceTaskId=186fdc6c-1b0b-42e9-9fb1-e71e44a3906f
+ceTaskUrl=http://localhost:9000/api/ce/task?id=186fdc6c-1b0b-42e9-9fb1-e71e44a3906f
