@@ -23,15 +23,15 @@ class Library {
 
     public synchronized void requestRead(int readerId) throws InterruptedException {
         String currentReaderSymbol = "Reader " + readerId;
-        System.out.println(currentReaderSymbol +  " chce czytać");
-        System.out.println(delim);
+        SafePrinter.safePrint(currentReaderSymbol +  " chce czytać");
+        SafePrinter.safePrint(delim);
 
         waitingPeople.add(currentReaderSymbol);
 
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
 
         while(!Objects.equals(waitingPeople.peek(), currentReaderSymbol) || peopleCurrentlyInside == maxReadersInside) {
             wait();
@@ -39,12 +39,12 @@ class Library {
         waitingPeople.poll();
         peopleCurrentlyInside++;
         peopleInside.add(currentReaderSymbol);
-        System.out.println(currentReaderSymbol + " wszedl i czyta");
+        SafePrinter.safePrint(currentReaderSymbol + " wszedl i czyta");
 
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
 
     }
 
@@ -52,68 +52,68 @@ class Library {
         String currentReaderSymbol = "Reader " + readerId;
         peopleCurrentlyInside--;
         peopleInside.remove(currentReaderSymbol);
-        System.out.println(currentReaderSymbol + " zakonczyl czytanie");
+        SafePrinter.safePrint(currentReaderSymbol + " zakonczyl czytanie");
 
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         notifyAll();
     }
 
 
     public synchronized void requestWrite(int writerId) throws InterruptedException {
         String currentWriterSymbol = "Writer " + writerId;
-        System.out.println(currentWriterSymbol +  " chce pisać");
-        System.out.println(delim);
+        SafePrinter.safePrint(currentWriterSymbol +  " chce pisać");
+        SafePrinter.safePrint(delim);
 
         waitingPeople.add(currentWriterSymbol);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         while(!Objects.equals(waitingPeople.peek(), currentWriterSymbol) || peopleCurrentlyInside > 0) {
             wait();
         }
         waitingPeople.poll();
         peopleCurrentlyInside = maxReadersInside;
         peopleInside.add(currentWriterSymbol);
-        System.out.println(currentWriterSymbol + " wszedl i pisze");
+        SafePrinter.safePrint(currentWriterSymbol + " wszedl i pisze");
 
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
     }
 
     public synchronized void finishWrite(int writerId) {
         String currentWriterSymbol = "Writer " + writerId;
         peopleCurrentlyInside = 0;
         peopleInside.remove(currentWriterSymbol);
-        System.out.println(currentWriterSymbol + " zakonczyl pisanie");
+        SafePrinter.safePrint(currentWriterSymbol + " zakonczyl pisanie");
 
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
-        System.out.println(delim);
+        SafePrinter.safePrint(delim);
 
         notifyAll();
     }
 
     private void dumpQueue(Queue<String> waitingPeople) {
         if(waitingPeople.isEmpty()) return;
-        System.out.println("Currently in queue: ");
+        SafePrinter.safePrint("Currently in queue: ");
         for(String person : waitingPeople) {
-            System.out.print(person + ", ");
+            SafePrinter.safePrintWithoutNewLine(person + ", ");
         }
-        System.out.println();
+        SafePrinter.safePrint();
     }
 
     private void dumpList(List<String> peopleInside) {
         if(peopleInside.isEmpty()) return;
-        System.out.println("People currently inside: ");
+        SafePrinter.safePrint("People currently inside: ");
         for(String s : peopleInside) {
-            System.out.print(s + ", ");
+            SafePrinter.safePrintWithoutNewLine(s + ", ");
         }
-        System.out.println();
+        SafePrinter.safePrint();
     }
 }

@@ -120,5 +120,43 @@ class LibraryTest {
         assertFalse(library.peopleInside.contains(library.waitingPeople.peek()));
     }
 
+    @Test
+    void testIfEveryOneReadOrWroteAtLeastOnce() throws Exception {
+        Library library = new Library(5);
+        Writer[] writers = new Writer[2];
+        Reader[] readers = new Reader[2];
+
+        for(int i=0; i<writers.length; i++) {
+            writers[i] = new Writer(i, library);
+        }
+
+        for(int i=0; i< readers.length; i++) {
+            readers[i] = new Reader(i, library);
+        }
+        Arrays.stream(writers).forEach(Writer::start);
+        Arrays.stream(readers).forEach(Reader::start);
+
+
+        Arrays.stream(writers).forEach(Writer::stopRunning);
+        Arrays.stream(readers).forEach(Reader::stopRunning);
+
+        for (Writer writer : writers) {
+            writer.join(100);
+        }
+        for (Reader reader : readers) {
+            reader.join(100);
+        }
+
+        for (Writer writer : writers) {
+            assertTrue(writer.isWroteAtLeastOnce());
+        }
+
+        for (Reader reader : readers) {
+            assertTrue(reader.isReadAtLeastOnce());
+        }
+
+
+    }
+
 
 }

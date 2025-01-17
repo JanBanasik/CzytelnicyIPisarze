@@ -1,12 +1,16 @@
 package pl.edu.agh.kis.pz1;
 
-import java.util.Random;
+import lombok.Getter;
 
+import java.security.SecureRandom;
+
+@Getter
 public class Reader extends Thread {
 
     private final int readerId;
     private final Library library;
-    private final Random r = new Random();
+    private final SecureRandom r = new SecureRandom();
+    private boolean readAtLeastOnce = true;
     private volatile boolean running = true;
 
     public Reader(int readerId, Library library) {
@@ -20,10 +24,12 @@ public class Reader extends Thread {
             try {
                 library.requestRead(readerId);
                 Thread.sleep(1000 + getRandomTime() * 2000);
+
                 library.finishRead(readerId);
+                readAtLeastOnce = true;
                 Thread.sleep(1000 + getRandomTime() * 2000);
             } catch (InterruptedException e) {
-                System.out.println("Błąd w działaniu czytelnika " + readerId + ": " + e.getMessage());
+                SafePrinter.safePrint("Błąd w działaniu czytelnika " + readerId + ": " + e.getMessage());
                 Thread.currentThread().interrupt();
             }
         }
@@ -36,4 +42,6 @@ public class Reader extends Thread {
     public void stopRunning() {
         running = false;
     }
+
+
 }
