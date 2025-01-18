@@ -158,5 +158,36 @@ class LibraryTest {
 
     }
 
+    @Test
+    void testMultipleReaderAndWriterCannotEnterSimultaneously() throws InterruptedException {
 
+        Library library = new Library(5);
+        Writer[] writers = new Writer[3];
+        Reader[] readers = new Reader[10];
+
+        for (int i = 0; i < writers.length; i++) {
+            writers[i] = new Writer(i, library);
+            writers[i].setName("Writer" + i);
+        }
+
+        for (int i = 0; i < readers.length; i++) {
+            readers[i] = new Reader(i, library);
+            readers[i].setName("Reader" + i);
+        }
+
+        Arrays.stream(writers).forEach(Writer::start);
+        Arrays.stream(readers).forEach(Reader::start);
+
+        for(Reader reader : readers) {
+            reader.join(1000);
+        }
+        for(Writer writer : writers) {
+            writer.join(1000);
+        }
+
+        int readersInside = (int) library.peopleInside.stream().filter(p -> p.startsWith("Reader")).count();
+        int writersInside = (int) library.peopleInside.stream().filter(p -> p.startsWith("Writer")).count();
+
+        assertTrue(readersInside == 0 || writersInside == 0);
+    }
 }

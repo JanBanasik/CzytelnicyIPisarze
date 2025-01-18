@@ -65,7 +65,7 @@ import java.util.Scanner;
 <span class="fc" id="L65">            readers[i].setName(&quot;Reader&quot; + i);</span>
         }
 
-        // Start all writers and readers in separate threads
+
 <span class="fc" id="L69">        Arrays.stream(writers).forEach(Writer::start);</span>
 <span class="fc" id="L70">        Arrays.stream(readers).forEach(Reader::start);</span>
 <span class="fc" id="L71">    }</span>

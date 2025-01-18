@@ -27,23 +27,23 @@
 -windowtitle
 'Modul glowny aplikacji - klasa Main z metoda main 1.0 API'
 'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/main/src/main/java/pl/edu/agh/kis/pz1/Main.java'
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\utils\target\utils-1.0.jar = 1737155461027
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\model-1.0.jar = 1737155476724
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\utils\target\utils-1.0.jar = 1737212141260
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\model-1.0.jar = 1737212172247
 C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\src\main\java = 1735914929439
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\target\generated-sources\annotations = 1737155478422
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\allclasses-index.html = 1737155479808
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\allpackages-index.html = 1737155479810
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\element-list = 1737155479761
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\help-doc.html = 1737155479833
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\index-all.html = 1737155479825
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\index.html = 1737155479826
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\jquery-ui.overrides.css = 1737155480042
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\member-search-index.js = 1737155479814
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\module-search-index.js = 1737155479811
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\overview-tree.html = 1737155479795
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\package-search-index.js = 1737155479813
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\script.js = 1737155479851
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\search.js = 1737155479852
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\stylesheet.css = 1737155479849
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\tag-search-index.js = 1737155479814
-C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\type-search-index.js = 1737155479814
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\target\generated-sources\annotations = 1737212174767
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\allclasses-index.html = 1737212176885
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\allpackages-index.html = 1737212176890
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\element-list = 1737212176827
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\help-doc.html = 1737212176919
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\index-all.html = 1737212176908
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\index.html = 1737212176910
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\jquery-ui.overrides.css = 1737212176936
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\member-search-index.js = 1737212176895
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\module-search-index.js = 1737212176891
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\overview-tree.html = 1737212176869
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\package-search-index.js = 1737212176893
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\script.js = 1737212176924
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\search.js = 1737212176927
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\stylesheet.css = 1737212176922
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\tag-search-index.js = 1737212176896
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\javadoc\apidocs\type-search-index.js = 1737212176894

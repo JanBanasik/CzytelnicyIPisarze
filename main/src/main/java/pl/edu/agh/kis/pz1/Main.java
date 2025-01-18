@@ -65,7 +65,7 @@ public class Main {
             readers[i].setName("Reader" + i);
         }
 
-        // Start all writers and readers in separate threads
+
         Arrays.stream(writers).forEach(Writer::start);
         Arrays.stream(readers).forEach(Reader::start);
     }
