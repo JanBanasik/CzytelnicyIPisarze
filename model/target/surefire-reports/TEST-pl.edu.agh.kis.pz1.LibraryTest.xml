@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="pl.edu.agh.kis.pz1.LibraryTest" time="14.921" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="pl.edu.agh.kis.pz1.LibraryTest" time="14.822" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sonar.projectName" value="Czytelnicy1"/>
     <property name="java.specification.version" value="17"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="PL"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\jan_b\AppData\Local\Temp\surefire12209255187201050310\surefirebooter-20250118155543684_3.jar C:\Users\jan_b\AppData\Local\Temp\surefire12209255187201050310 2025-01-18T15-55-39_058-jvmRun1 surefire-20250118155543684_1tmp surefire_0-20250118155543684_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\jan_b\AppData\Local\Temp\surefire18227183352176586102\surefirebooter-20250118162414947_3.jar C:\Users\jan_b\AppData\Local\Temp\surefire18227183352176586102 2025-01-18T16-24-09_962-jvmRun1 surefire-20250118162414947_1tmp surefire_0-20250118162414947_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\test-classes;C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\classes;C:\Users\jan_b\.m2\repository\junit\junit\4.13.1\junit-4.13.1.jar;C:\Users\jan_b\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\jan_b\.m2\repository\org\junit\jupiter\junit-jupiter\5.11.4\junit-jupiter-5.11.4.jar;C:\Users\jan_b\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.4\junit-jupiter-api-5.11.4.jar;C:\Users\jan_b\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\jan_b\.m2\repository\org\junit\platform\junit-platform-commons\1.11.4\junit-platform-commons-1.11.4.jar;C:\Users\jan_b\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\jan_b\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.11.4\junit-jupiter-params-5.11.4.jar;C:\Users\jan_b\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.4\junit-jupiter-engine-5.11.4.jar;C:\Users\jan_b\.m2\repository\org\junit\platform\junit-platform-engine\1.11.4\junit-platform-engine-1.11.4.jar;C:\Users\jan_b\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\utils\target\utils-1.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\jan_b\AppData\Local\Temp\surefire12209255187201050310\surefirebooter-20250118155543684_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\jan_b\AppData\Local\Temp\surefire18227183352176586102\surefirebooter-20250118162414947_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+8-LTS-286"/>
@@ -60,7 +60,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testIfEveryOneReadOrWroteAtLeastOnce" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.558">
+  <testcase name="testIfEveryOneReadOrWroteAtLeastOnce" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.485">
     <system-out><![CDATA[Writer 0 chce pisać
 ---------------------------
 Currently in queue: 
@@ -117,7 +117,7 @@ Number of people currently inside: 1
 ---------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="testWriterCanEnterWhenLibraryEmpty" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.003">
+  <testcase name="testWriterCanEnterWhenLibraryEmpty" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.002">
     <system-out><![CDATA[Writer 1 chce pisać
 ---------------------------
 Currently in queue: 
@@ -132,7 +132,39 @@ Number of people currently inside: 5
 ---------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="testWriterCanEnterWhenReaderIsDone" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.013">
+  <testcase name="testWriterCanEnterWhenReaderIsDone" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.004">
+    <system-out><![CDATA[Reader 1 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, 
+Number of people currently inside: 0
+---------------------------
+Reader 1 wszedl i czyta
+---------------------------
+People currently inside: 
+Reader 1, 
+Number of people currently inside: 1
+---------------------------
+Reader 1 zakonczyl czytanie
+---------------------------
+Number of people currently inside: 0
+---------------------------
+Writer 1 chce pisać
+---------------------------
+Currently in queue: 
+Writer 1, 
+Number of people currently inside: 0
+---------------------------
+Writer 1 wszedl i pisze
+---------------------------
+People currently inside: 
+Writer 1, 
+Number of people currently inside: 5
+---------------------------
+]]></system-out>
+  </testcase>
+  <testcase name="testReaderAndWriterCannotEnterSimultaneously" classname="pl.edu.agh.kis.pz1.LibraryTest" time="1.015">
     <system-out><![CDATA[Reader 1 chce czytać
 ---------------------------
 ---------------------------
@@ -153,42 +185,6 @@ Writer 1,
 People currently inside: 
 Reader 1, 
 Number of people currently inside: 1
----------------------------
-Reader 1 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Writer 1, 
-Number of people currently inside: 0
----------------------------
-Writer 1 wszedl i pisze
----------------------------
-People currently inside: 
-Writer 1, 
-Number of people currently inside: 5
----------------------------
-]]></system-out>
-  </testcase>
-  <testcase name="testReaderAndWriterCannotEnterSimultaneously" classname="pl.edu.agh.kis.pz1.LibraryTest" time="1.02">
-    <system-out><![CDATA[Writer 1 chce pisać
----------------------------
-Currently in queue: 
-Writer 1, 
-Number of people currently inside: 0
----------------------------
-Writer 1 wszedl i pisze
----------------------------
-People currently inside: 
-Writer 1, 
-Number of people currently inside: 5
----------------------------
-Reader 1 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Reader 1, 
-People currently inside: 
-Writer 1, 
-Number of people currently inside: 5
 ---------------------------
 Writer 0 zakonczyl pisanie
 ---------------------------
@@ -214,7 +210,7 @@ Number of people currently inside: 2
 ---------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="testRunThreads" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.106">
+  <testcase name="testRunThreads" classname="pl.edu.agh.kis.pz1.LibraryTest" time="0.109">
     <system-out><![CDATA[Writer 0 chce pisać
 ---------------------------
 Currently in queue: 
@@ -229,7 +225,7 @@ Number of people currently inside: 5
 ---------------------------
 ]]></system-out>
   </testcase>
-  <testcase name="testMultipleReaderAndWriterCannotEnterSimultaneously" classname="pl.edu.agh.kis.pz1.LibraryTest" time="13.106">
+  <testcase name="testMultipleReaderAndWriterCannotEnterSimultaneously" classname="pl.edu.agh.kis.pz1.LibraryTest" time="13.148">
     <system-out><![CDATA[Writer 0 chce pisać
 ---------------------------
 Currently in queue: 
@@ -242,10 +238,19 @@ People currently inside:
 Writer 0, 
 Number of people currently inside: 5
 ---------------------------
+Reader 1 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
 Writer 2 chce pisać
 ---------------------------
 Currently in queue: 
-Writer 2, 
+Reader 1, Writer 2, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
@@ -253,61 +258,7 @@ Number of people currently inside: 5
 Writer 1 chce pisać
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, 
-People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
----------------------------
-Reader 2 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 2, Writer 1, Reader 2, 
-People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
----------------------------
-Reader 9 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, 
-People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
----------------------------
-Reader 8 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, 
-People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
----------------------------
-Reader 6 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, 
-People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
----------------------------
-Reader 7 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, 
-People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
----------------------------
-Reader 5 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, 
+Reader 1, Writer 2, Writer 1, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
@@ -316,7 +267,7 @@ Reader 4 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, 
+Reader 1, Writer 2, Writer 1, Reader 4, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
@@ -325,16 +276,43 @@ Reader 3 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
 ---------------------------
-Reader 1 chce czytać
+Reader 9 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 2 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 7 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 6 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
@@ -343,7 +321,25 @@ Reader 0 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 8 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 5 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
@@ -375,25 +371,48 @@ Number of people currently inside: 0
 Writer 0 zakonczyl pisanie
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, 
+Reader 1, Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, 
 Number of people currently inside: 0
 ---------------------------
-Writer 2 wszedl i pisze
+Reader 1 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, 
+Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, 
 People currently inside: 
-Writer 2, 
-Number of people currently inside: 5
+Reader 1, 
+Number of people currently inside: 1
 ---------------------------
 Writer 1 zakonczyl pisanie
 ---------------------------
 Number of people currently inside: 0
 ---------------------------
+Reader 1 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Writer 2, Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, 
+Number of people currently inside: 0
+---------------------------
+Writer 2 wszedl i pisze
+---------------------------
+Currently in queue: 
+Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, 
+People currently inside: 
+Writer 2, 
+Number of people currently inside: 5
+---------------------------
 Writer 0 chce pisać
 ---------------------------
 Currently in queue: 
-Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, 
+Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, 
+People currently inside: 
+Writer 2, 
+Number of people currently inside: 5
+---------------------------
+Reader 1 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, 
 People currently inside: 
 Writer 2, 
 Number of people currently inside: 5
@@ -401,13 +420,13 @@ Number of people currently inside: 5
 Writer 2 zakonczyl pisanie
 ---------------------------
 Currently in queue: 
-Writer 1, Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, 
+Writer 1, Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, 
 Number of people currently inside: 0
 ---------------------------
 Writer 1 wszedl i pisze
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, 
+Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, 
 People currently inside: 
 Writer 1, 
 Number of people currently inside: 5
@@ -415,7 +434,7 @@ Number of people currently inside: 5
 Writer 2 chce pisać
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, 
+Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
 Writer 1, 
 Number of people currently inside: 5
@@ -423,124 +442,13 @@ Number of people currently inside: 5
 Writer 1 zakonczyl pisanie
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, 
+Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 Number of people currently inside: 0
----------------------------
-Reader 2 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, 
-People currently inside: 
-Reader 2, 
-Number of people currently inside: 1
----------------------------
-Writer 1 chce pisać
----------------------------
-Currently in queue: 
-Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 2, 
-Number of people currently inside: 1
----------------------------
-Reader 2 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-Number of people currently inside: 0
----------------------------
-Reader 9 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 8, Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 9, 
-Number of people currently inside: 1
----------------------------
-Reader 8 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 6, Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 9, Reader 8, 
-Number of people currently inside: 2
----------------------------
-Reader 6 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 7, Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 9, Reader 8, Reader 6, 
-Number of people currently inside: 3
----------------------------
-Reader 7 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 5, Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 9, Reader 8, Reader 6, Reader 7, 
-Number of people currently inside: 4
----------------------------
-Reader 5 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 9, Reader 8, Reader 6, Reader 7, Reader 5, 
-Number of people currently inside: 5
----------------------------
-Reader 6 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 9, Reader 8, Reader 7, Reader 5, 
-Number of people currently inside: 4
----------------------------
-Reader 2 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Reader 4, Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
-People currently inside: 
-Reader 9, Reader 8, Reader 7, Reader 5, 
-Number of people currently inside: 4
 ---------------------------
 Reader 4 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
-People currently inside: 
-Reader 9, Reader 8, Reader 7, Reader 5, Reader 4, 
-Number of people currently inside: 5
----------------------------
-Reader 9 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
-People currently inside: 
-Reader 8, Reader 7, Reader 5, Reader 4, 
-Number of people currently inside: 4
----------------------------
-Reader 8 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
-People currently inside: 
-Reader 7, Reader 5, Reader 4, 
-Number of people currently inside: 3
----------------------------
-Reader 7 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
-People currently inside: 
-Reader 5, Reader 4, 
-Number of people currently inside: 2
----------------------------
-Reader 5 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 3, Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
+Reader 3, Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
 Reader 4, 
 Number of people currently inside: 1
@@ -548,102 +456,230 @@ Number of people currently inside: 1
 Reader 3 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Reader 1, Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
+Reader 9, Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
 Reader 4, Reader 3, 
 Number of people currently inside: 2
 ---------------------------
-Reader 1 wszedl i czyta
+Reader 9 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Reader 0, Writer 0, Writer 2, Writer 1, Reader 2, 
+Reader 2, Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
-Reader 4, Reader 3, Reader 1, 
+Reader 4, Reader 3, Reader 9, 
 Number of people currently inside: 3
 ---------------------------
-Reader 0 wszedl i czyta
+Reader 2 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, 
+Reader 7, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
-Reader 4, Reader 3, Reader 1, Reader 0, 
+Reader 4, Reader 3, Reader 9, Reader 2, 
 Number of people currently inside: 4
 ---------------------------
-Reader 5 chce czytać
----------------------------
+Reader 7 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, 
+Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
-Reader 4, Reader 3, Reader 1, Reader 0, 
+Reader 4, Reader 3, Reader 9, Reader 2, Reader 7, 
+Number of people currently inside: 5
+---------------------------
+Reader 7 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
+People currently inside: 
+Reader 4, Reader 3, Reader 9, Reader 2, 
 Number of people currently inside: 4
 ---------------------------
-Reader 1 zakonczyl czytanie
+Writer 1 chce pisać
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, 
+Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 People currently inside: 
-Reader 4, Reader 3, Reader 0, 
+Reader 4, Reader 3, Reader 9, Reader 2, 
+Number of people currently inside: 4
+---------------------------
+Reader 6 wszedl i czyta
+---------------------------
+Currently in queue: 
+Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 4, Reader 3, Reader 9, Reader 2, Reader 6, 
+Number of people currently inside: 5
+---------------------------
+Reader 2 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 4, Reader 3, Reader 9, Reader 6, 
+Number of people currently inside: 4
+---------------------------
+Reader 9 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 4, Reader 3, Reader 6, 
 Number of people currently inside: 3
----------------------------
-Reader 9 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, 
-People currently inside: 
-Reader 4, Reader 3, Reader 0, 
-Number of people currently inside: 3
----------------------------
-Reader 4 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, 
-People currently inside: 
-Reader 3, Reader 0, 
-Number of people currently inside: 2
 ---------------------------
 Reader 3 zakonczyl czytanie
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, 
+Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 People currently inside: 
-Reader 0, 
-Number of people currently inside: 1
+Reader 4, Reader 6, 
+Number of people currently inside: 2
 ---------------------------
-Reader 8 chce czytać
----------------------------
+Reader 4 zakonczyl czytanie
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, 
+Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 People currently inside: 
-Reader 0, 
+Reader 6, 
 Number of people currently inside: 1
+---------------------------
+Reader 0 wszedl i czyta
+---------------------------
+Currently in queue: 
+Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 6, Reader 0, 
+Number of people currently inside: 2
+---------------------------
+Reader 8 wszedl i czyta
+---------------------------
+Currently in queue: 
+Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 6, Reader 0, Reader 8, 
+Number of people currently inside: 3
+---------------------------
+Reader 5 wszedl i czyta
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 6, Reader 0, Reader 8, Reader 5, 
+Number of people currently inside: 4
+---------------------------
+Reader 6 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 0, Reader 8, Reader 5, 
+Number of people currently inside: 3
 ---------------------------
 Reader 0 zakonczyl czytanie
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, 
-Number of people currently inside: 0
+Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 8, Reader 5, 
+Number of people currently inside: 2
 ---------------------------
 Reader 7 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, 
-Number of people currently inside: 0
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, 
+People currently inside: 
+Reader 8, Reader 5, 
+Number of people currently inside: 2
 ---------------------------
-Reader 6 chce czytać
+Reader 2 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, 
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, 
+People currently inside: 
+Reader 8, Reader 5, 
+Number of people currently inside: 2
+---------------------------
+Reader 9 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, 
+People currently inside: 
+Reader 8, Reader 5, 
+Number of people currently inside: 2
+---------------------------
+Reader 3 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, 
+People currently inside: 
+Reader 8, Reader 5, 
+Number of people currently inside: 2
+---------------------------
+Reader 4 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, 
+People currently inside: 
+Reader 8, Reader 5, 
+Number of people currently inside: 2
+---------------------------
+Reader 8 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, 
+People currently inside: 
+Reader 5, 
+Number of people currently inside: 1
+---------------------------
+Reader 5 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, 
 Number of people currently inside: 0
 ---------------------------
 Writer 0 wszedl i pisze
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, 
+Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 6 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 0 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 8 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, 
+People currently inside: 
+Writer 0, 
+Number of people currently inside: 5
+---------------------------
+Reader 5 chce czytać
+---------------------------
+---------------------------
+Currently in queue: 
+Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, 
 People currently inside: 
 Writer 0, 
 Number of people currently inside: 5
@@ -651,49 +687,35 @@ Number of people currently inside: 5
 Writer 0 zakonczyl pisanie
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, 
+Reader 1, Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, 
+Number of people currently inside: 0
+---------------------------
+Reader 1 wszedl i czyta
+---------------------------
+Currently in queue: 
+Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, 
+People currently inside: 
+Reader 1, 
+Number of people currently inside: 1
+---------------------------
+Reader 1 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Writer 2, Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, 
 Number of people currently inside: 0
 ---------------------------
 Writer 2 wszedl i pisze
 ---------------------------
 Currently in queue: 
-Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, 
+Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, 
 People currently inside: 
 Writer 2, 
 Number of people currently inside: 5
 ---------------------------
-Reader 1 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, 
-People currently inside: 
-Writer 2, 
-Number of people currently inside: 5
----------------------------
-Reader 0 chce czytać
----------------------------
+Writer 0 chce pisać
 ---------------------------
 Currently in queue: 
-Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, 
-People currently inside: 
-Writer 2, 
-Number of people currently inside: 5
----------------------------
-Reader 3 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, 
-People currently inside: 
-Writer 2, 
-Number of people currently inside: 5
----------------------------
-Reader 4 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, 
+Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, 
 People currently inside: 
 Writer 2, 
 Number of people currently inside: 5
@@ -701,21 +723,22 @@ Number of people currently inside: 5
 Writer 2 zakonczyl pisanie
 ---------------------------
 Currently in queue: 
-Writer 1, Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, 
+Writer 1, Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, 
 Number of people currently inside: 0
 ---------------------------
 Writer 1 wszedl i pisze
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, 
+Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, 
 People currently inside: 
 Writer 1, 
 Number of people currently inside: 5
 ---------------------------
-Writer 0 chce pisać
+Reader 1 chce czytać
+---------------------------
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, 
+Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, 
 People currently inside: 
 Writer 1, 
 Number of people currently inside: 5
@@ -723,7 +746,7 @@ Number of people currently inside: 5
 Writer 2 chce pisać
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
+Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
 People currently inside: 
 Writer 1, 
 Number of people currently inside: 5
@@ -731,263 +754,93 @@ Number of people currently inside: 5
 Writer 1 zakonczyl pisanie
 ---------------------------
 Currently in queue: 
-Reader 2, Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
+Reader 7, Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
+Number of people currently inside: 0
+---------------------------
+Reader 7 wszedl i czyta
+---------------------------
+Currently in queue: 
+Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, 
+People currently inside: 
+Reader 7, 
+Number of people currently inside: 1
+---------------------------
+Writer 1 chce pisać
+---------------------------
+Currently in queue: 
+Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
+People currently inside: 
+Reader 7, 
+Number of people currently inside: 1
+---------------------------
+Reader 7 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Reader 2, Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 Number of people currently inside: 0
 ---------------------------
 Reader 2 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Reader 5, Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
+Reader 9, Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 People currently inside: 
 Reader 2, 
 Number of people currently inside: 1
 ---------------------------
-Reader 5 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 9, Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
-People currently inside: 
-Reader 2, Reader 5, 
-Number of people currently inside: 2
----------------------------
 Reader 9 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Reader 8, Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
+Reader 3, Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 People currently inside: 
-Reader 2, Reader 5, Reader 9, 
-Number of people currently inside: 3
----------------------------
-Reader 8 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
-People currently inside: 
-Reader 2, Reader 5, Reader 9, Reader 8, 
-Number of people currently inside: 4
----------------------------
-Reader 5 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
-People currently inside: 
-Reader 2, Reader 9, Reader 8, 
-Number of people currently inside: 3
----------------------------
-Reader 7 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 6, Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
-People currently inside: 
-Reader 2, Reader 9, Reader 8, Reader 7, 
-Number of people currently inside: 4
----------------------------
-Reader 6 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, 
-People currently inside: 
-Reader 2, Reader 9, Reader 8, Reader 7, Reader 6, 
-Number of people currently inside: 5
----------------------------
-Writer 1 chce pisać
----------------------------
-Currently in queue: 
-Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 2, Reader 9, Reader 8, Reader 7, Reader 6, 
-Number of people currently inside: 5
----------------------------
-Reader 8 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 2, Reader 9, Reader 7, Reader 6, 
-Number of people currently inside: 4
----------------------------
-Reader 9 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 2, Reader 7, Reader 6, 
-Number of people currently inside: 3
----------------------------
-Reader 2 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 1, Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 7, Reader 6, 
+Reader 2, Reader 9, 
 Number of people currently inside: 2
----------------------------
-Reader 1 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 0, Reader 3, Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 7, Reader 6, Reader 1, 
-Number of people currently inside: 3
----------------------------
-Reader 0 wszedl i czyta
----------------------------
-Currently in queue: 
-Reader 3, Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 7, Reader 6, Reader 1, Reader 0, 
-Number of people currently inside: 4
 ---------------------------
 Reader 3 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Reader 4, Writer 0, Writer 2, Writer 1, 
+Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, 
 People currently inside: 
-Reader 7, Reader 6, Reader 1, Reader 0, Reader 3, 
-Number of people currently inside: 5
----------------------------
-Reader 7 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 6, Reader 1, Reader 0, Reader 3, 
-Number of people currently inside: 4
----------------------------
-Reader 1 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 6, Reader 0, Reader 3, 
+Reader 2, Reader 9, Reader 3, 
 Number of people currently inside: 3
----------------------------
-Reader 0 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 6, Reader 3, 
-Number of people currently inside: 2
----------------------------
-Reader 3 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Reader 4, Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 6, 
-Number of people currently inside: 1
----------------------------
-Reader 4 wszedl i czyta
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, 
-People currently inside: 
-Reader 6, Reader 4, 
-Number of people currently inside: 2
----------------------------
-Reader 5 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, 
-People currently inside: 
-Reader 6, Reader 4, 
-Number of people currently inside: 2
----------------------------
-Reader 6 zakonczyl czytanie
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
----------------------------
-Reader 8 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
----------------------------
-Reader 9 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
----------------------------
-Reader 2 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
----------------------------
-Reader 6 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
----------------------------
-Reader 1 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, Reader 1, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
----------------------------
-Reader 0 chce czytać
----------------------------
----------------------------
-Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, Reader 1, Reader 0, 
-People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
 ---------------------------
 Reader 7 chce czytać
 ---------------------------
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, Reader 1, Reader 0, Reader 7, 
+Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, 
 People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
+Reader 2, Reader 9, Reader 3, 
+Number of people currently inside: 3
 ---------------------------
-Reader 3 chce czytać
----------------------------
+Reader 2 zakonczyl czytanie
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, Reader 1, Reader 0, Reader 7, Reader 3, 
+Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, 
 People currently inside: 
-Reader 4, 
-Number of people currently inside: 1
+Reader 9, Reader 3, 
+Number of people currently inside: 2
 ---------------------------
-Reader 4 zakonczyl czytanie
+Reader 9 zakonczyl czytanie
 ---------------------------
 Currently in queue: 
-Writer 0, Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, Reader 1, Reader 0, Reader 7, Reader 3, 
+Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, 
+People currently inside: 
+Reader 3, 
+Number of people currently inside: 1
+---------------------------
+Reader 3 zakonczyl czytanie
+---------------------------
+Currently in queue: 
+Reader 4, Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, 
 Number of people currently inside: 0
 ---------------------------
-Writer 0 wszedl i pisze
+Reader 4 wszedl i czyta
 ---------------------------
 Currently in queue: 
-Writer 2, Writer 1, Reader 5, Reader 8, Reader 9, Reader 2, Reader 6, Reader 1, Reader 0, Reader 7, Reader 3, 
+Reader 6, Reader 0, Reader 8, Reader 5, Writer 0, Reader 1, Writer 2, Writer 1, Reader 7, 
 People currently inside: 
-Writer 0, 
-Number of people currently inside: 5
+Reader 4, 
+Number of people currently inside: 1
 ---------------------------
 ]]></system-out>
   </testcase>

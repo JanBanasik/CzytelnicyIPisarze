@@ -54,3 +54,23 @@ Inne istotne informacje:
 - Program obsługuje jednoczesne wątki czytelników i pisarzy.
 - W trakcie działania programu wątki mogą wykonywać symulowane zadania, takie jak czytanie i pisanie z losowymi opóźnieniami.
 - Program synchronizuje dostęp do zasobów za pomocą obiektów AtomicInteger, metod synchronized oraz kolejki FIFO.
+
+---
+
+### Synchronizacja wątków przy pomocy `wait()` i `notify()`:
+
+1. **Metody `wait()` i `notify()`**:
+   - **`wait()`**: Metoda ta jest wywoływana przez wątki, które muszą poczekać na spełnienie pewnych warunków, zanim będą mogły kontynuować swoją pracę. W przypadku tego projektu, wątki czytelników i pisarzy wywołują `wait()` w przypadku, gdy nie mogą uzyskać dostępu do biblioteki. Dzieje się tak, jeśli:
+     - Czytelnik nie jest na początku kolejki (nie jest pierwszym oczekującym).
+     - Liczba czytelników przekroczyła dozwoloną liczbę (`maxReadersInside`).
+     - Pisarz nie jest na początku kolejki lub w bibliotece są już inni ludzie (czytelnicy lub pisarz).
+   - **`notifyAll()`**: Metoda ta budzi wątki, które oczekują na warunek, gdy ten zostanie spełniony. Po zakończeniu sesji czytania lub pisania, odpowiednia metoda (`finishRead()` lub `finishWrite()`) wywołuje `notify()`, aby obudzić inne wątki oczekujące na dostęp do biblioteki.
+
+2. **Zmienna `maxPeopleInside`**:
+   - Zmienna ta reprezentuje maksymalną liczbę czytelników, którzy mogą być jednocześnie w bibliotece. Dzięki tej zmiennej algorytm kontroluje liczbę czytelników, którzy mogą wchodzić do biblioteki w tym samym czasie. Jeśli liczba ludzi w bibliotece osiągnie wartość `maxPeopleInside`, czytelnicy będą musieli poczekać na swoją kolej.
+
+3. **Kolejka `waitingPeople`**:
+   - Kolejka ta przechowuje osoby (czytelników i pisarzy) oczekujące na dostęp do biblioteki. Kolejność w kolejce determinuje, kto jako pierwszy uzyska dostęp do biblioteki. Mechanizm ten zapewnia, że wątki są obsługiwane zgodnie z zasadą "pierwszy przyszedł, pierwszy wyszedł". Dzięki użyciu `ConcurrentLinkedQueue`, kolejka jest bezpieczna w użyciu przez wiele wątków jednocześnie.
+
+4. **Zmienna `peopleCurrentlyInside`**:
+   - Zmienna ta śledzi aktualną liczbę osób w bibliotece. Używa się jej, aby kontrolować, ile osób jest w bibliotece i upewnić się, że liczba czytelników nie przekroczy limitu (`maxReadersInside`). Zmienna ta jest typu `AtomicInteger`, co pozwala na bezpieczne wykonywanie operacji zwiększania i zmniejszania liczby osób w bibliotece w sposób wielowątkowy.
