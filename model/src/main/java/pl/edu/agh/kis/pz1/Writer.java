@@ -59,6 +59,7 @@ public class Writer extends Thread {
                 library.finishWrite(writerId);
                 wroteAtLeastOnce = true;
                 Thread.sleep(1000 + getRandomTime() * 2000);
+
             } catch (InterruptedException e) {
                 SafePrinter.safePrint("Błąd w działaniu pisarza " + writerId + ": " + e.getMessage());
                 Thread.currentThread().interrupt();

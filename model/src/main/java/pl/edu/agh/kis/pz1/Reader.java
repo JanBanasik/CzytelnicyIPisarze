@@ -58,6 +58,7 @@ public class Reader extends Thread {
                 library.finishRead(readerId);
                 readAtLeastOnce = true;
                 Thread.sleep(1000 + getRandomTime() * 2000);
+
             } catch (InterruptedException e) {
                 SafePrinter.safePrint("Błąd w działaniu czytelnika " + readerId + ": " + e.getMessage());
                 Thread.currentThread().interrupt();

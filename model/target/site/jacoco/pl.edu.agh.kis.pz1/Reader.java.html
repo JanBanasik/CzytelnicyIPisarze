@@ -58,12 +58,13 @@ public class Reader extends Thread {
 <span class="fc" id="L58">                library.finishRead(readerId);</span>
 <span class="fc" id="L59">                readAtLeastOnce = true;</span>
 <span class="fc" id="L60">                Thread.sleep(1000 + getRandomTime() * 2000);</span>
-<span class="fc" id="L61">            } catch (InterruptedException e) {</span>
-<span class="fc" id="L62">                SafePrinter.safePrint(&quot;Błąd w działaniu czytelnika &quot; + readerId + &quot;: &quot; + e.getMessage());</span>
-<span class="fc" id="L63">                Thread.currentThread().interrupt();</span>
-<span class="fc" id="L64">            }</span>
+
+<span class="fc" id="L62">            } catch (InterruptedException e) {</span>
+<span class="fc" id="L63">                SafePrinter.safePrint(&quot;Błąd w działaniu czytelnika &quot; + readerId + &quot;: &quot; + e.getMessage());</span>
+<span class="fc" id="L64">                Thread.currentThread().interrupt();</span>
+<span class="fc" id="L65">            }</span>
         }
-<span class="fc" id="L66">    }</span>
+<span class="fc" id="L67">    }</span>
 
     /**
      * Generates a random time value to simulate varying delays.
@@ -71,7 +72,7 @@ public class Reader extends Thread {
      * @return a random time value.
      */
     private long getRandomTime() {
-<span class="fc" id="L74">        return (long) ((r.nextLong() - Long.MIN_VALUE) / (Long.MAX_VALUE - (double) Long.MIN_VALUE));</span>
+<span class="fc" id="L75">        return (long) ((r.nextLong() - Long.MIN_VALUE) / (Long.MAX_VALUE - (double) Long.MIN_VALUE));</span>
     }
 
     /**
@@ -79,7 +80,7 @@ public class Reader extends Thread {
      * The thread will finish its current iteration before terminating.
      */
     public void stopRunning() {
-<span class="fc" id="L82">        running = false;</span>
-<span class="fc" id="L83">    }</span>
+<span class="fc" id="L83">        running = false;</span>
+<span class="fc" id="L84">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
