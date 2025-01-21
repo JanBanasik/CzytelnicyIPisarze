@@ -54,7 +54,6 @@ public class Library {
 
         waitingPeople.add(currentReaderSymbol);
 
-        SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
         dumpList(peopleInside);
         SafePrinter.safePrint(literalPeopleInside + peopleCurrentlyInside.get());

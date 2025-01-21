@@ -92,7 +92,7 @@ public class Library {
 <span class="fc" id="L92">        dumpList(peopleInside);</span>
 <span class="fc" id="L93">        SafePrinter.safePrint(literalPeopleInside + peopleCurrentlyInside.get());</span>
 <span class="fc" id="L94">        SafePrinter.safePrint(delim);</span>
-<span class="fc" id="L95">        notifyAll(); // Notify other waiting threads</span>
+<span class="fc" id="L95">        notifyAll();</span>
 <span class="fc" id="L96">    }</span>
 
     /**
@@ -145,7 +145,7 @@ public class Library {
 <span class="fc" id="L145">        SafePrinter.safePrint(literalPeopleInside + peopleCurrentlyInside.get());</span>
 <span class="fc" id="L146">        SafePrinter.safePrint(delim);</span>
 
-<span class="fc" id="L148">        notifyAll(); // Notify other waiting threads</span>
+<span class="fc" id="L148">        notifyAll();</span>
 <span class="fc" id="L149">    }</span>
 
     /**
