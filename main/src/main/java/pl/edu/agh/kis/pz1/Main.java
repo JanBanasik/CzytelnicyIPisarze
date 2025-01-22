@@ -16,7 +16,40 @@ public class Main {
      * @param args the command line arguments (not used in this case).
      */
     public static void main(String[] args) {
-        createAndRunThreads();
+        if(args.length == 0) {
+            createAndRunThreads();
+        }
+        else if(args.length == 2){
+            Library library = new Library(5);
+            Writer[] writers = new Writer[Integer.parseInt(args[1])];
+            Reader[] readers = new Reader[Integer.parseInt(args[0])];
+
+            runThreads(library, writers, readers);
+        }
+    }
+
+    /**
+     * Starts the threads for readers and writers.
+     * Initializes and starts all writer and reader threads using the provided library instance.
+     *
+     * @param library the library instance shared among all threads
+     * @param writers an array of Writer threads to be created and started
+     * @param readers an array of Reader threads to be created and started
+     */
+    public static void runThreads(Library library, Writer[] writers, Reader[] readers) {
+        for (int i = 0; i < writers.length; i++) {
+            writers[i] = new Writer(i, library);
+            writers[i].setName("Writer" + i);
+        }
+
+        for (int i = 0; i < readers.length; i++) {
+            readers[i] = new Reader(i, library);
+            readers[i].setName("Reader" + i);
+        }
+
+
+        Arrays.stream(writers).forEach(Writer::start);
+        Arrays.stream(readers).forEach(Reader::start);
     }
 
     /**
@@ -44,9 +77,7 @@ public class Main {
     }
 
     /**
-     * Creates and starts the threads for readers and writers based on the user input.
      * It initializes the library, creates the specified number of reader and writer threads,
-     * and starts their execution.
      */
     public static void createAndRunThreads() {
         List<Integer> values = getUserInfo();
@@ -55,18 +86,6 @@ public class Main {
         Writer[] writers = new Writer[values.get(1)];
         Reader[] readers = new Reader[values.get(2)];
 
-        for (int i = 0; i < writers.length; i++) {
-            writers[i] = new Writer(i, library);
-            writers[i].setName("Writer" + i);
-        }
-
-        for (int i = 0; i < readers.length; i++) {
-            readers[i] = new Reader(i, library);
-            readers[i].setName("Reader" + i);
-        }
-
-
-        Arrays.stream(writers).forEach(Writer::start);
-        Arrays.stream(readers).forEach(Reader::start);
+        runThreads(library, writers, readers);
     }
 }
