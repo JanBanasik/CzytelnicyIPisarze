@@ -1,0 +1,55 @@
+@options
+@argfile
+--class-path
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/main/target/classes;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/target/classes;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/utils/target/classes;C:/Users/jan_b/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+-sourcepath
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/main/src/main/java;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/main/target/generated-sources/annotations;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/target/generated-sources/annotations;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/utils/src/main/java;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/utils/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/javadoc/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Przyklad - aplikacja wielomodulowa 1.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Przyklad - aplikacja wielomodulowa 1.0 API'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/main/src/main/java/pl/edu/agh/kis/pz1/Main.java'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java/pl/edu/agh/kis/pz1/Library.java'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java/pl/edu/agh/kis/pz1/Reader.java'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java/pl/edu/agh/kis/pz1/Writer.java'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/utils/src/main/java/pl/edu/agh/kis/pz1/SafePrinter.java'
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\src\main\java = 1735914929439
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\main\target\generated-sources\annotations = 1737541942181
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\src\main\java = 1735914929469
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\generated-sources\annotations = 1737541941020
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\utils\src\main\java = 1737541226727
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\utils\target\generated-sources\annotations = 1737541940382
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\allclasses-index.html = 1737541962527
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\allpackages-index.html = 1737541962530
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\element-list = 1737541962397
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\help-doc.html = 1737541962562
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\index-all.html = 1737541962552
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\index.html = 1737541962555
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\jquery-ui.overrides.css = 1737541962774
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\member-search-index.js = 1737541962535
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\module-search-index.js = 1737541962532
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\overview-tree.html = 1737541962498
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\package-search-index.js = 1737541962533
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\script.js = 1737541962587
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\search.js = 1737541962589
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\stylesheet.css = 1737541962584
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\tag-search-index.js = 1737541962536
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\javadoc\apidocs\type-search-index.js = 1737541962534

@@ -1,0 +1,51 @@
+@options
+@argfile
+-classpath
+'C:/Users/jan_b/.m2/repository/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/utils/target/utils-1.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+-sourcepath
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java;C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'model 1.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'model 1.0 API'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java/pl/edu/agh/kis/pz1/Library.java'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java/pl/edu/agh/kis/pz1/Reader.java'
+'C:/Users/jan_b/OneDrive/Pulpit/CzytelnicyIPisarze/model/src/main/java/pl/edu/agh/kis/pz1/Writer.java'
+C:\Users\jan_b\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar = 1734218532698
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\utils\target\utils-1.0.jar = 1737541965658
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\src\main\java = 1735914929469
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\generated-sources\annotations = 1737541988128
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\allclasses-index.html = 1737541999854
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\allpackages-index.html = 1737541999858
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\element-list = 1737541999763
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\help-doc.html = 1737541999892
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\index-all.html = 1737541999881
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\index.html = 1737541999885
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\jquery-ui.overrides.css = 1737541999914
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\member-search-index.js = 1737541999864
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\module-search-index.js = 1737541999860
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\overview-tree.html = 1737541999836
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\package-search-index.js = 1737541999861
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\script.js = 1737541999897
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\search.js = 1737541999900
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\stylesheet.css = 1737541999895
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\tag-search-index.js = 1737541999866
+C:\Users\jan_b\OneDrive\Pulpit\CzytelnicyIPisarze\model\target\apidocs\type-search-index.js = 1737541999863
