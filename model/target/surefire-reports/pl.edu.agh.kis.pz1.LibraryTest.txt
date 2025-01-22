@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: pl.edu.agh.kis.pz1.LibraryTest
--------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.70 s -- in pl.edu.agh.kis.pz1.LibraryTest
