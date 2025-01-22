@@ -49,7 +49,7 @@ public class Library {
      */
     public synchronized void requestRead(int readerId) throws InterruptedException {
         String currentReaderSymbol = "Reader " + readerId;
-        SafePrinter.safePrint(currentReaderSymbol + " chce czytać");
+        SafePrinter.safePrint(currentReaderSymbol + " wants to read");
         SafePrinter.safePrint(delim);
 
         waitingPeople.add(currentReaderSymbol);
@@ -66,7 +66,7 @@ public class Library {
         waitingPeople.poll();
         peopleCurrentlyInside.incrementAndGet();
         peopleInside.add(currentReaderSymbol);
-        SafePrinter.safePrint(currentReaderSymbol + " wszedl i czyta");
+        SafePrinter.safePrint(currentReaderSymbol + " has entered and is reading");
 
         SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
@@ -84,7 +84,7 @@ public class Library {
         String currentReaderSymbol = "Reader " + readerId;
         peopleCurrentlyInside.decrementAndGet();
         peopleInside.remove(currentReaderSymbol);
-        SafePrinter.safePrint(currentReaderSymbol + " zakonczyl czytanie");
+        SafePrinter.safePrint(currentReaderSymbol + " finished reading");
 
         SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
@@ -102,7 +102,7 @@ public class Library {
      */
     public synchronized void requestWrite(int writerId) throws InterruptedException {
         String currentWriterSymbol = "Writer " + writerId;
-        SafePrinter.safePrint(currentWriterSymbol + " chce pisać");
+        SafePrinter.safePrint(currentWriterSymbol + " wants to write");
         SafePrinter.safePrint(delim);
 
         waitingPeople.add(currentWriterSymbol);
@@ -118,7 +118,7 @@ public class Library {
         waitingPeople.poll();
         peopleCurrentlyInside.set(maxReadersInside); // Reserve all slots for the writer
         peopleInside.add(currentWriterSymbol);
-        SafePrinter.safePrint(currentWriterSymbol + " wszedl i pisze");
+        SafePrinter.safePrint(currentWriterSymbol + "has entered and is writing");
 
         SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);
@@ -136,7 +136,7 @@ public class Library {
         String currentWriterSymbol = "Writer " + writerId;
         peopleCurrentlyInside.set(0); // Free all slots
         peopleInside.remove(currentWriterSymbol);
-        SafePrinter.safePrint(currentWriterSymbol + " zakonczyl pisanie");
+        SafePrinter.safePrint(currentWriterSymbol + " finished writing");
 
         SafePrinter.safePrint(delim);
         dumpQueue(waitingPeople);

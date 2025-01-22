@@ -61,7 +61,7 @@ public class Writer extends Thread {
                 Thread.sleep(1000 + getRandomTime() * 2000);
 
             } catch (InterruptedException e) {
-                SafePrinter.safePrint("Błąd w działaniu pisarza " + writerId + ": " + e.getMessage());
+                SafePrinter.safePrint("Error running the writer " + writerId + ": " + e.getMessage());
                 Thread.currentThread().interrupt();
             }
         }
