@@ -15,12 +15,9 @@ The algorithm ensures that readers can read simultaneously, while writers requir
 ## How to Run
 To run the program, use the following command in the terminal:
 ```bash
-java -jar .\main	arget\main-1.0.jar
+java -jar .\main\target\main-1.0.jar numberOfReaders numberOfWriters
 ```
-After executing this command, the program will prompt you to specify:
-- The maximum number of readers allowed to read simultaneously.
-- The number of writers.
-- The number of readers.
+If numberOfReaders and numberOfWriters are not specified then the program asks user to enter them.
 
 ---
 
